@@ -3,8 +3,6 @@ $(document).ready(function(){
   menus();
 });
 
-
-
 function menus() {
   $("#context-menu").hide();
   //mostramos el menú con click derecho
