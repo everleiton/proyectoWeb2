@@ -12,11 +12,9 @@ body{
 }
 .contenedor{
   padding: 20px;
-
   display: flex;
   width: auto;
   height: 600px;
-
   background-size: cover;
   justify-content: flex-end;
 
@@ -29,31 +27,26 @@ ul{
 }
 
 li{
-  line-height: 30px;
+ line-height: 30px;
   font-size: 16px;
   cursor:pointer;
+  box-shadow:
 }
 
 #context-menu{
   background-color: white;
   width:250px;
   position:absolute;
-
-
-  -moz-box-shadow: 0 0 5px #888;
-  -webkit-box-shadow: 0 0 5px#888;
-  box-shadow: 0 0 5px #888;
-}
-.button{
-  margin: 200px;
+  -moz-box-shadow: 0 0 30px #159dc1;
+  -webkit-box-shadow: 0 0 30px #159dc1;
+  box-shadow: 0 0 30px #159dc1;
 }
 
 .agregarproyecto{
   width: 600px;
 }
 
-
 #dialog, #dialog2 {
   border: none;
-  box-shadow: 0 9px 46px 8px rgba(0, 0, 0, 0.14), 0 11px 15px -7px rgba(0, 0, 0, 0.12), 0 24px 38px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 30px #159dc1;
   width: 400px; }
