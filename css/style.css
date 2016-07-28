@@ -75,7 +75,9 @@ li{
   color: white;
     box-shadow: 0 0 30px #159dc1;
 }
-  
+  .proyecto .nombre{
+
+  }
   .proyecto{
     display: flex;
   height: 200px;
@@ -83,6 +85,6 @@ li{
   background-color: lightblue;
   margin: 20px;
   border-radius: 20px;
-
+flex-flow: column;
 justify-content: center;
   }
