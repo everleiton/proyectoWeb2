@@ -73,5 +73,5 @@ function menus() {
       });
   }
   function crearcuadro(nombre) {
-      $('.contenedor').append('<div class="proyecto" id=nombre ></div>');
+      $('.contenedor').append('<div class="proyecto" id='+nombre+' ></div>');
   }
