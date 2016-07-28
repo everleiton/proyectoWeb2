@@ -10,11 +10,28 @@ body{
   -moz-background-size: cover;
   -o-background-size: cove
 }
-.contenedor{
+.contenedorprincipal{
   padding: 20px;
   display: flex;
   width: auto;
   height: 600px;
+  background-size: cover;
+  justify-content: flex-end;
+
+}.contenedor{
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  justify-content: flex-end;
+
+}
+.contenedormenus{
+  padding: 20px;
+  display: flex;
+  width: 40px;
+  height: 40px;
   background-size: cover;
   justify-content: flex-end;
 
@@ -42,11 +59,17 @@ li{
   box-shadow: 0 0 30px #159dc1;
 }
 
-.agregarproyecto{
-  width: 600px;
-}
+
 
 #dialog, #dialog2 {
   border: none;
   box-shadow: 0 0 30px #159dc1;
-  width: 400px; }
+  width: 420px; }
+
+
+  .proyecto{
+  height: 200px;
+  width: 200px;
+  background-color: green;
+  margin: 20px;
+  }

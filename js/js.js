@@ -62,7 +62,7 @@ function menus() {
   function data() {
     $('#btnagregarproyecto').click(function(){
       var nom = document.getElementById('nombreproyecto').value;
-    alert(nom);
+    crearcuadro(nom);
   //  localStorage.removeItem('drafts.queue');
 
       dialog.close();
@@ -71,4 +71,7 @@ function menus() {
       document.getElementById("nombreproyecto").value = null;
 
       });
+  }
+  function crearcuadro(nombre) {
+      $('.contenedor').append('<div class="proyecto" id=nombre ></div>');
   }
