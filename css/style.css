@@ -8,10 +8,11 @@ body{
   background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cove
+  -o-background-size: cover;
+
 }
 .contenedorprincipal{
-              padding: 20px;
+  padding: 20px;
   display: flex;
   width: auto;
   height: 600px;
@@ -66,10 +67,22 @@ li{
   box-shadow: 0 0 30px #159dc1;
   width: 420px; }
 
-
+.nombre{
+  width: 200px;
+  background-color: red;
+  height:50px;
+  text-align: center;
+  color: white;
+    box-shadow: 0 0 30px #159dc1;
+}
+  
   .proyecto{
+    display: flex;
   height: 200px;
   width: 200px;
-  background-color: green;
+  background-color: lightblue;
   margin: 20px;
+  border-radius: 20px;
+
+justify-content: center;
   }
