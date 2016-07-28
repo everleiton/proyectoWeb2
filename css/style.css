@@ -11,7 +11,7 @@ body{
   -o-background-size: cove
 }
 .contenedorprincipal{
-  padding: 20px;
+              padding: 20px;
   display: flex;
   width: auto;
   height: 600px;
