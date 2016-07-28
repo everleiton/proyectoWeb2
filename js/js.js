@@ -2,12 +2,15 @@ $(document).ready(function(){
   data();
   menus();
 });
-
+var x = 0;
+var y = 0;
 function menus() {
   $("#context-menu").hide();
   //mostramos el menú con click derecho
   $(document).bind("contextmenu", function(e){
     $("#context-menu").css({'display':'block', 'left':e.pageX, 'top':e.pageY});
+    x = e.pageX;
+    y = e.pageY;
     return false;
   });
   //cuando hagamos click, el menú desaparecerá
@@ -62,16 +65,33 @@ function menus() {
   function data() {
     $('#btnagregarproyecto').click(function(){
       var nom = document.getElementById('nombreproyecto').value;
+      if (nom =='') {
+      $('#nombreproyecto').css('border-color: red');
+    
+    }else{
     crearcuadro(nom);
-  //  localStorage.removeItem('drafts.queue');
+  
+
+
 
       dialog.close();
       /*Guardando los datos en el LocalStorage*/
       localStorage.setItem('Nombre', nom);
+    }
       document.getElementById("nombreproyecto").value = null;
 
       });
+  
   }
   function crearcuadro(nombre) {
-      $('.contenedor').append('<div class="proyecto" id='+nombre+' ></div>');
+      $('.contenedor').append('<div class="proyecto" >'
+            +'  <div class="nombre">'
+              +'<h5><img src="./imagenes/proyecto.png" height="16px" width="16px"alt="imagen no encontrada" />'+nombre+'</h5 >'    
+              +'</div> <div class="persona"></div></div>');
+          
+  
+               $('#'+nombre).css('left'+this.x+ '; top'+this.y);
+        
   }
+
+
