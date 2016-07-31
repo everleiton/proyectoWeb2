@@ -88,13 +88,11 @@ function menus() {
 function data() {
     $('#btnagregarproyecto').click(function() {
         var nom = document.getElementById('nombreproyecto').value;
-        if (nom == 'LKNJB') {
+        if (nom == '') {
             $('#nombreproyecto').css('border-color: red');
 
         } else {
             crearcuadro(nom);
-
-
 
 
             dialog.close();
