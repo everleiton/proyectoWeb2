@@ -1,9 +1,23 @@
 $(document).ready(function(){
   data();
   menus();
+  enter();
 });
 var x = 0;
 var y = 0;
+function enter(){
+
+  document.onkeypress=function(e){
+var esIE=(document.all);
+var esNS=(document.layers);
+tecla=(esIE) ? event.keyCode : e.which;
+if(tecla==13){
+	alert("Ud. ha presionado la tecla Enter"); return false;
+  }
+}
+
+}
+
 function menus() {
   $("#context-menu").hide();
   //mostramos el menú con click derecho
@@ -31,9 +45,12 @@ function menus() {
       var dialog = document.querySelector('#dialog');
       if (! dialog.showModal) {
         dialogPolyfill.registerDialog(dialog);
+        $('#dialog').css('left'+this.x+ '; top'+this.y);
+      
       }
       dialogButton.addEventListener('click', function() {
         dialog.showModal();
+         $('#dialog').css('left'+this.x+ '; top'+this.y);
       });
       dialog.querySelector('button:not([disabled])').addEventListener('click', function() {
         dialog.close();
@@ -65,7 +82,7 @@ function menus() {
   function data() {
     $('#btnagregarproyecto').click(function(){
       var nom = document.getElementById('nombreproyecto').value;
-      if (nom =='') {
+      if (nom =='LKNJB') {
       $('#nombreproyecto').css('border-color: red');
     
     }else{
@@ -84,14 +101,11 @@ function menus() {
   
   }
   function crearcuadro(nombre) {
-      $('.contenedor').append('<div class="proyecto" >'
+      $('.contenedor').append('<div class="proyecto" id="'+nombre+'" >'
             +'  <div class="nombre">'
               +'<h5><img src="./imagenes/proyecto.png" height="16px" width="16px"alt="imagen no encontrada" />'+nombre+'</h5 >'    
               +'</div> <div class="persona"></div></div>');
-          
-  
-               $('#'+nombre).css('left'+this.x+ '; top'+this.y);
+
         
   }
-
-
+  
