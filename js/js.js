@@ -88,11 +88,13 @@ function menus() {
 function data() {
     $('#btnagregarproyecto').click(function() {
         var nom = document.getElementById('nombreproyecto').value;
-        if (nom == '') {
+        if (nom == 'LKNJB') {
             $('#nombreproyecto').css('border-color: red');
 
         } else {
             crearcuadro(nom);
+
+
 
 
             dialog.close();
@@ -106,10 +108,26 @@ function data() {
 }
 
 function crearcuadro(nombre) {
-    $('.contenedor').append('<div class="proyecto" id="' + nombre + '" >' +
-        '  <div class="nombre">' +
-        '<h5><img src="./imagenes/proyecto.png" height="16px" width="16px"alt="imagen no encontrada" />' + nombre + '</h5 >' +
-        '</div> <div class="persona"></div></div>');
+    $('.contenedor').append('<div class="proyecto" id="' + nombre + '"><div class="nombre"><div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>' +
+        '    <div><h5>' + nombre + '</h5></div><div class="botonopcionescuadro">' +
+        '  <button id="menu-speed' + nombreproyecto + '" class="mdl-button mdl-js-button mdl-button--icon"><img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" /></button>' +
+        '<ul class="mdl-menu mdl-js-menu" for="menu-speed' + nombreproyecto + '">' +
+        '<li class="mdl-menu__item" id="">Editar</li><li class="mdl-menu__item" id="">Eiminar</li></ul></div></h5></div><div class="persona"> </div> </div>');
 
 
 }
+
+
+function btnEditar_Click(event) {
+
+    txtTitulo.value = this.elemento.titulo;
+    txtDescripcion.value = this.elemento.descripcion;
+    ddlTipo.value = this.elemento.tipo;
+
+}
+/*
+Selección de elementos en base al nombre de clase
+
+$('div.myClass'); // si se especifica el tipo de elemento,
+                  // se mejora el rendimiento de la selección
+*/
