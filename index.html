@@ -2,119 +2,119 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Project Manager</title>
-    <link rel="icon" type="image/png" href="./imagenes/icono.png" />
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./framework/material.min.css">
-    <link rel="stylesheet" href="./css/material.min.css">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-light_blue.min.css" />
+  <meta charset="utf-8">
+  <title>Project Manager</title>
+  <link rel="icon" type="image/png" href="./imagenes/icono.png" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./framework/material.min.css">
+  <link rel="stylesheet" href="./css/material.min.css">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-light_blue.min.css" />
 </head>
 
 <body>
-
-    <div class="contenedorprincipal">
-        <div class="contenedor">
-            <div class="proyecto" id="NOMBREPROYECTO">
-                <div class="nombre">
-                    <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>
-                    <div>
-                        <h5>NOMBREPROYECTO</h5></div>
-                    <div class="botonopcionescuadro">
-                        <button id="menu-speedNOMBREPROYECTO" class="mdl-button mdl-js-button mdl-button--icon"><img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" /></button>
-                        <ul class="mdl-menu mdl-js-menu" for="menu-speedNOMBREPROYECTO">
-                            <li class="mdl-menu__item" id="">Editar</li>
-                            <li class="mdl-menu__item" id="">Eiminar</li>
-                        </ul>
-                    </div>
-                    </h5>
-                </div>
-                <div class="persona"> </div>
+  
+  <div class="contenedorprincipal">
+    <div class="contenedor">
+      <div class="proyecto" id="NOMBREPROYECTO">
+        <div class="nombre">
+          <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>
+          <div>
+            <h5>NOMBREPROYECTO</h5></div>
+            <div class="botonopcionescuadro">
+              <button id="menu-speedNOMBREPROYECTO" class="mdl-button mdl-js-button mdl-button--icon"><img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" /></button>
+              <ul class="mdl-menu mdl-js-menu" for="menu-speedNOMBREPROYECTO">
+                <li class="mdl-menu__item" id="">Editar</li>
+                <li class="mdl-menu__item" id="">Eiminar</li>
+              </ul>
             </div>
-            <div class="proyecto" id="ever">
-                <div class="nombre">
-                    <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>
-                    <div>
-                        <h5>NOMBREPROYECTO</h5></div>
-                    <div class="">
-                        <ul id="menu">
-                            <li><img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
-                                <ul>
-                                    <li><a href="">Editar</a></li>
-                                    <li><a href="">Eliminar</a></li>
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-
-
-                    </h5>
-                </div>
-                <div class="persona"> </div>
+          </h5>
+        </div>
+        <div class="persona"> </div>
+      </div>
+      <div class="proyecto" id="ever">
+        <div class="nombre">
+          <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>
+          <div>
+            <h5>NOMBREPROYECTO</h5></div>
+            <div class="">
+              <ul id="menu">
+                <li><img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
+                  <ul>
+                    <li><a href="">Editar</a></li>
+                    <li><a href="">Eliminar</a></li>
+                  </ul>
+                </li>
+                
+              </ul>
             </div>
+            
+            
+          </h5>
         </div>
-
-        <div class="contenedormenus">
-            <div class="botonopciones">
-                <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
-                    <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
-                </button>
-                <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
-                    <li class="mdl-menu__item"><img src="./imagenes/mostrar.png" height="16px" width="16px" alt="imagen no encontrada" /> Mostrar cuadro de espera</li>
-                    <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
-                    <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
-                </ul>
-            </div>
-            <div class="mdl-tooltip mdl-tooltip--large" for="demo-menu-lower-right">Opciones...</div>
-
-            <div id="context-menu">
-                <ul>
-                    <li class="addpro" id="crear_proyecto"> <img src="./imagenes/proyecto.png" height="26px" width="26px" alt="imagen no encontrada" />Crear proyecto</li>
-                    <li class="addper" id="crear_persona"> <img src="./imagenes/persona.png" height="26px" width="26px" alt="imagen no encontrada" />Crear persona</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="agregarproyecto">
-            <dialog id="dialog" class="mdl-dialog">
-                <h3 class="mdl-dialog__title">Agregar un proyecto <img src="./imagenes/proyecto.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
-                <div class="mdl-dialog__content">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="nombreproyecto">
-
-                        <label class="mdl-textfield__label" for="nombreproyecto">Nombre del proyecto...</label>
-                    </div>
-                </div>
-                <div class="mdl-dialog__actions">
-                    <button id="btncancelar" type="button" class="mdl-button">Cancelar</button>
-                    <button id="btnagregarproyecto" type="button" class="mdl-button">Agregar proyecto</button>
-                </div>
-            </dialog>
-        </div>
-
-        <div class="agregarpersona">
-            <dialog id="dialog2" class="mdl-dialog">
-                <h3 class="mdl-dialog__title">Agregar una persona <img src="./imagenes/persona.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
-                <div class="mdl-dialog__content">
-                    <div class="mdl-textfield mdl-js-textfield">
-                        <input class="mdl-textfield__input" type="text" id="nombre">
-                        <label class="mdl-textfield__label" for="nombre">Nombre de la persona...</label>
-                    </div>
-                </div>
-                <div class="mdl-dialog__actions">
-                    <button id="btncancelar" type="button" class="mdl-button">Cancelar</button>
-                    <button id="btnagregarproyecto" type="button" class="mdl-button">Agregar persona</button>
-                </div>
-            </dialog>
-        </div>
+        <div class="persona"> </div>
+      </div>
     </div>
-
-    <script type="text/javascript" src="./js/jquery-3.1.0.min.js">
-    </script>
-    <script type="text/javascript" src="./js/js.js">
-    </script>
-    <script src="./framework/material.min.js"></script>
+    
+    <div class="contenedormenus">
+      <div class="botonopciones">
+        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+          <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+          <li class="mdl-menu__item"><img src="./imagenes/mostrar.png" height="16px" width="16px" alt="imagen no encontrada" /> Mostrar cuadro de espera</li>
+          <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
+          <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
+        </ul>
+      </div>
+      <div class="mdl-tooltip mdl-tooltip--large" for="demo-menu-lower-right">Opciones...</div>
+      
+      <div id="context-menu">
+        <ul>
+          <li class="addpro" id="crear_proyecto"> <img src="./imagenes/proyecto.png" height="26px" width="26px" alt="imagen no encontrada" />Crear proyecto</li>
+          <li class="addper" id="crear_persona"> <img src="./imagenes/persona.png" height="26px" width="26px" alt="imagen no encontrada" />Crear persona</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="agregarproyecto">
+      <dialog id="dialog" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Agregar un proyecto <img src="./imagenes/proyecto.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
+        <div class="mdl-dialog__content">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nombreproyecto">
+            
+            <label class="mdl-textfield__label" for="nombreproyecto">Nombre del proyecto...</label>
+          </div>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button id="btncancelar" type="button" class="mdl-button">Cancelar</button>
+          <button id="btnagregarproyecto" type="button" class="mdl-button">Agregar proyecto</button>
+        </div>
+      </dialog>
+    </div>
+    
+    <div class="agregarpersona">
+      <dialog id="dialog2" class="mdl-dialog">
+        <h3 class="mdl-dialog__title">Agregar una persona <img src="./imagenes/persona.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
+        <div class="mdl-dialog__content">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="nombre">
+            <label class="mdl-textfield__label" for="nombre">Nombre de la persona...</label>
+          </div>
+        </div>
+        <div class="mdl-dialog__actions">
+          <button id="btncancelar" type="button" class="mdl-button">Cancelar</button>
+          <button id="btnagregarproyecto" type="button" class="mdl-button">Agregar persona</button>
+        </div>
+      </dialog>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="./js/jquery-3.1.0.min.js">
+  </script>
+  <script type="text/javascript" src="./js/js.js">
+  </script>
+  <script src="./framework/material.min.js"></script>
 </body>
 </html</htmlpt>
 </body>
