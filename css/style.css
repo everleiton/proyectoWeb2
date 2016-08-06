@@ -69,14 +69,15 @@ li {
   color: white;
   box-shadow: 0 0 30px #159dc1;
   justify-content: space-between;
+  flex-flow: row;
 }
 .botonopcionescuadro {
   padding-top: 5px;
   float: right;
 }
 .persona {
-  height: 150px;
-  width: 200px;
+  height: 100px;
+  width: 100px;
 }
 .proyecto {
   display: flex;
@@ -94,6 +95,7 @@ li {
   
   list-style: none;
   text-align: right;
+  padding-left: 20px;
 }
 #menu li>a {
   background-color: #217cb6;

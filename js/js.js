@@ -1,24 +1,12 @@
 $(document).ready(function() {
   data();
   menus();
-  enter();
+  eliminar();
 });
 var x = 0;
 var y = 0;
 
-function enter() {
-  
-  document.onkeypress = function(e) {
-    var esIE = (document.all);
-    var esNS = (document.layers);
-    tecla = (esIE) ? event.keyCode : e.which;
-    if (tecla == 13) {
-      alert("Ud. ha presionado la tecla Enter");
-      return false;
-    }
-  }
-  
-}
+
 
 function menus() {
   $("#context-menu").hide();
@@ -88,15 +76,11 @@ function menus() {
 function data() {
   $('#btnagregarproyecto').click(function() {
     var nom = document.getElementById('nombreproyecto').value;
-    if (nom == 'LKNJB') {
+    if (nom == '') {
       $('#nombreproyecto').css('border-color: red');
       
     } else {
-      crearcuadro(nom);
-      
-      
-      
-      
+      crearcuadro(nom);    
       dialog.close();
       /*Guardando los datos en el LocalStorage*/
       localStorage.setItem('Nombre', nom);
@@ -112,11 +96,24 @@ function crearcuadro(nombre) {
   '  <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>'+
   '  <div><h5>'+nombre+'</h5></div> <div class="menucuadro"><ul id="menu">'+
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
-  '  <ul><li><a href="">Editar</a></li><li><a href="">Eliminar</a></li>'+
+  '  <ul><li id="editar"><a href="">Editar</a></li><li id="eliminar"><a href="">Eliminar</a></li>'+
   '  </ul></li></ul></div></h5></div><div class="persona"> </div></div>');
   
   
 }
+
+
+function eliminar(){
+  var id= $(this).prop('id');
+  $('#elimminar').click(function(event) {
+    
+   $('#'+id).remove();
+
+  });
+  
+}
+
+
 
 
 function btnEditar_Click(event) {
