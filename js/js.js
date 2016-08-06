@@ -2,6 +2,7 @@ $(document).ready(function() {
   data();
   menus();
   eliminar();
+  espera();
 });
 var x = 0;
 var y = 0;
@@ -92,7 +93,7 @@ function data() {
 }
 
 function crearcuadro(nombre) {
-  $('.contenedor').append('  <div class="proyecto" id="'+nombre+'"><div class="nombre">'+
+  $('.contenedorpro').append(' <div class="proyecto" id="'+nombre+'"><div class="nombre">'+
   '  <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>'+
   '  <div><h5>'+nombre+'</h5></div> <div class="menucuadro"><ul id="menu">'+
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
@@ -104,7 +105,7 @@ function crearcuadro(nombre) {
 
 
 function eliminar(){
-  var id= $(this).prop('id');
+  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
   $('#elimminar').click(function(event) {
     
    $('#'+id).remove();
@@ -113,7 +114,33 @@ function eliminar(){
   
 }
 
+function espera(){
+  $('#alternar-panel-oculto').toggle( 
 
+       /* 
+           Primer click.
+           Función que descubre un panel oculto
+           y cambia el texto del botón.
+       */
+       function(e){ 
+           $('#panel-oculto').slideDown();
+           $(this).text('Cerrar el panel');
+           e.preventDefault();
+       }, // Separamos las dos funciones con una coma
+    
+       /* 
+           Segundo click.
+           Función que oculta el panel
+           y vuelve a cambiar el texto del botón.
+       */
+       function(e){ 
+           $('#panel-oculto').slideUp();
+           $(this).text('Mostrar el panel oculto');
+           e.preventDefault();
+       }
+
+   );
+}
 
 
 function btnEditar_Click(event) {
