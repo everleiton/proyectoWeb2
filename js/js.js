@@ -93,12 +93,12 @@ function data() {
 }
 
 function crearcuadro(nombre) {
-  $('.contenedorpro').append(' <div class="proyecto" id="'+nombre+'"><div class="nombre">'+
+  $('.contenedorpro').append(' <div class="proyecto" id="'+nombre+'" ><div class="nombre">'+
   '  <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>'+
   '  <div><h5>'+nombre+'</h5></div> <div class="menucuadro"><ul id="menu">'+
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
   '  <ul><li id="editar"><a href="">Editar</a></li><li id="eliminar"><a href="">Eliminar</a></li>'+
-  '  </ul></li></ul></div></h5></div><div class="persona"> </div></div>');
+  '  </ul></li></ul></div></h5></div><div class="persona"  ondrop="soltar(event)" ondragover="permitirSoltar(event)"> </div></div>');
   
   
 }
@@ -115,31 +115,12 @@ function eliminar(){
 }
 
 function espera(){
-  $('#alternar-panel-oculto').toggle( 
+  $('#mostrarespera').click(function(event) {
+    alert("Ever");
+    $('.espera').css("visibility","visible");
 
-       /* 
-           Primer click.
-           Función que descubre un panel oculto
-           y cambia el texto del botón.
-       */
-       function(e){ 
-           $('#panel-oculto').slideDown();
-           $(this).text('Cerrar el panel');
-           e.preventDefault();
-       }, // Separamos las dos funciones con una coma
-    
-       /* 
-           Segundo click.
-           Función que oculta el panel
-           y vuelve a cambiar el texto del botón.
-       */
-       function(e){ 
-           $('#panel-oculto').slideUp();
-           $(this).text('Mostrar el panel oculto');
-           e.preventDefault();
-       }
-
-   );
+  });
+  
 }
 
 
