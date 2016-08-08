@@ -11,7 +11,7 @@ body {
   -o-background-size: cover;
 }
 .contenedorprincipal {
-  padding: 20px;
+  padding: 0px;
   display: flex;
   width: auto;
   height: 60%;
@@ -78,8 +78,10 @@ li {
 .persona {
   display: flex;
   height: 100px auto;
-  width: 100px;
-  padding-top: 20px;
+  width: 100px ;
+  padding: 10px;
+  justify-content: center;
+  
 }
 
 .proyecto {
@@ -100,8 +102,9 @@ li {
   width: 70px;
   flex-flow: column;
   text-align: center;
-  border-radius: 45px;
-  margin-bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 14px rgb(122, 249, 108);
+  margin: 10px;
 }
 #nombrecarita{
   display:flex;
@@ -113,63 +116,86 @@ li {
 .espera{
   display: flex;
   position:fixed;
-  background-color: red;
+  background-color:rgba(198, 19, 19, 0.11);
+  -webkit-box-shadow: 0px 0px 17px 1px rgba(250,250,250,0.62);
+  -moz-box-shadow: 0px 0px 17px 1px rgba(250,250,250,0.62);
+  box-shadow: 0px 0px 17px 1px rgba(250,250,250,0.62);
   width: 100px;
-  height: 200px;
+  height: 600px;
   justify-content:center;
   margin: auto;
   visibility:hidden;
-  
-}
-
-#panel-oculto {
-  display: none; 
-  position: fixed; 
-  top: 0; 
-  width: 100%;
-  height: 200px;
-  z-index: 1000;
-  background-color: #222; }
-}
-#menu {
-  
-  list-style: none;
-  text-align: right;
-  padding-left: 20px;
-}
-#menu li>a {
-  background-color: #217cb6;
-  color: white;
-  display: block;
-  text-decoration: none;
-  width: 70px;
+  flex-flow: column;
   padding: 10px;
-  text-align: center;
+  margin-top: 10px; 
+
 }
-#menu li>a:hover {
-  color: #217cb6;
-  background-color: #ffffff;
+#mostrarespera {
+  margin: 10px;
+  
+  } #ocultarespera{
+    margin: 10px;
+    visibility: hidden;
+  } 
   
   
-}
-#menu>li>#menu {
-  display: none;
-}
-#menu>li:hover>ul {
-  display: block;
-  
-}
-#menu>li>ul {
-  display: none;
-}
-#menu>li:hover>ul {
-  display: block;
-}
-@media (max-width: 600px) {
-  .contenedor {
-    background-color: red;
-  }   
-  
-  
-  
-  ///////////////////////
+  #mostrarespera:hover , #ocultarespera:hover{
+    -webkit-box-shadow: 0px 0px 65px -9px rgba(250,250,250,1);
+    -moz-box-shadow: 0px 0px 65px -9px rgba(250,250,250,1);
+    box-shadow: 0px 0px 65px -9px rgba(250,250,250,1);
+    
+  }
+  #json{
+    margin: 20px;
+  }
+  #panel-oculto {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    height: 200px;
+    z-index: 1000;
+    background-color: #222; }
+  }
+  #menu {
+    
+    list-style: none;
+    text-align: right;
+    padding-left: 0px;
+  }
+  #menu li>a {
+    background-color: #217cb6;
+    color: white;
+    display: block;
+    text-decoration: none;
+    width: 70px;
+    padding: 10px;
+    text-align: center;
+  }
+  #menu li>a:hover {
+    color: #217cb6;
+    background-color: #ffffff;
+    
+    
+  }
+  #menu>li>#menu {
+    display: none;
+  }
+  #menu>li:hover>ul {
+    display: block;
+    
+  }
+  #menu>li>ul {
+    display: none;
+  }
+  #menu>li:hover>ul {
+    display: block;
+  }
+  @media (max-width: 600px) {
+    .contenedor {
+      background-color: red;
+    }   
+    
+    
+    
+    ///////////////////////

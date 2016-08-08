@@ -14,38 +14,41 @@
 <body>
   
   <div class="contenedorprincipal">
-  
-  <button class="mdl-button mdl-js-button mdl-button--fab" id="mostrarespera">  <img src="./imagenes/mostrar.png" alt="" height="30px" width="30px" /></button>
-    <div class="espera"  ondrop="soltar(event)" ondragover="permitirSoltar(event)">
-      <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
-        <div class="">
-          <img src="./imagenes/face.png" alt="" height="50px" width="50px" />
-        </div>
-      <div class="" >
-        <h6 id="nombrecarita">Ever Leitón</h6>
-      </div>
-      </div>
+    
+    <div class="botonesespera">
+      <button class="mdl-button mdl-js-button mdl-button--fab" id="mostrarespera">  <img src="./imagenes/mostrar.png" alt="" height="30px" width="30px" /></button>
+      <button class="mdl-button mdl-js-button mdl-button--fab" id="ocultarespera">  <img src="./imagenes/back.png" alt="" height="30px" width="30px" /></button>
     </div>
+    <div class="espera"  ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+          <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
+            <div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>
+            <div><h6 draggable="false" id="nombrecarita">Ever Leitón</h6></div>
+          </div>
+          <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
+            <div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>
+            <div><h6 draggable="false" id="nombrecarita">Ever Leitón</h6></div>
+          </div>
+    </div>
+    
+    
     <div class="contenedor">
+      
+      
       <div class="contenedorpro" >
         
       </div>
-      <div class="contenedorper">
-        
       
-      </div>
       
-    
     </div>
-  
+    
     
     <div class="contenedormenus">
       
       <div class="botonopciones">
-        <button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+        <button id="json" class="mdl-button mdl-js-button mdl-button--icon">
           <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
         </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="json">
           <li class="mdl-menu__item"><img src="./imagenes/mostrar.png" height="16px" width="16px" alt="imagen no encontrada" /> Mostrar cuadro de espera</li>
           <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
           <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
@@ -61,7 +64,7 @@
         </ul>
       </div>
     </div>
-  
+    
     <div class="agregarproyecto">
       <dialog id="dialog" class="mdl-dialog">
         <h3 class="mdl-dialog__title">Agregar un proyecto <img src="./imagenes/proyecto.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
@@ -84,8 +87,8 @@
         <h3 class="mdl-dialog__title">Agregar una persona <img src="./imagenes/persona.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
         <div class="mdl-dialog__content">
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" id="nombre" required>
-            <label class="mdl-textfield__label" for="nombre">Nombre de la persona...</label>
+            <input class="mdl-textfield__input" type="text" id="nombrepersona" required>
+            <label class="mdl-textfield__label" for="nombrepersonaS">Nombre de la persona...</label>
           </div>
         </div>
         <div class="mdl-dialog__actions">
@@ -97,17 +100,17 @@
   </div>
   
   <script>
-    function permitirSoltar(ev) {
-     ev.preventDefault();
-    }
-    function soltar(ev) {
-     ev.preventDefault();
-     var data = ev.dataTransfer.getData("Text");
-     ev.target.appendChild(document.getElementById(data));
-    }
-    function arrastrar(ev) {
-     ev.dataTransfer.setData("Text", ev.target.id);
-    }
+  function permitirSoltar(ev) {
+    ev.preventDefault();
+  }
+  function soltar(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+  }
+  function arrastrar(ev) {
+    ev.dataTransfer.setData("Text", ev.target.id);
+  }
   </script>
   <script type="text/javascript" src="./js/jquery-3.1.0.min.js">
   </script>

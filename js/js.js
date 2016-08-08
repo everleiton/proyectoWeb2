@@ -2,7 +2,9 @@ $(document).ready(function() {
   data();
   menus();
   eliminar();
-  espera();
+espera();
+  ocultarespera();
+  obtenerid();
 });
 var x = 0;
 var y = 0;
@@ -75,10 +77,26 @@ function menus() {
 
 
 function data() {
+  /////////////////Datos de proyecto//////////////////////
   $('#btnagregarproyecto').click(function() {
     var nom = document.getElementById('nombreproyecto').value;
-    if (nom == '') {
+    if (nom === "") {
       $('#nombreproyecto').css('border-color: red');
+      alert("No debe dejar espacio en blanco");
+    } else {
+      crearcuadro(nom);    
+      dialog.close();
+      /*Guardando los datos en el LocalStorage*/
+      localStorage.setItem('Nombre', nom);
+    }
+    document.getElementById("nombreproyecto").value = null;
+    
+  });
+  ///////////////Datos de persona/////////////////
+  $('#btnagregarpersona').click(function() {
+    var nom = document.getElementById('nombrepersona').value;
+    if (nom == "") {
+      $('#nombrepersona').css('border-color: red');
       
     } else {
       crearcuadro(nom);    
@@ -89,11 +107,10 @@ function data() {
     document.getElementById("nombreproyecto").value = null;
     
   });
-  
 }
 
 function crearcuadro(nombre) {
-  $('.contenedorpro').append(' <div class="proyecto" id="'+nombre+'" ><div class="nombre">'+
+  $('.contenedorpro').append(' <div class="proyecto" id="pro-'+nombre+'" ><div class="nombre">'+
   '  <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>'+
   '  <div><h5>'+nombre+'</h5></div> <div class="menucuadro"><ul id="menu">'+
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
@@ -105,7 +122,7 @@ function crearcuadro(nombre) {
 
 
 function eliminar(){
-  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
+//  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
   $('#elimminar').click(function(event) {
     
    $('#'+id).remove();
@@ -116,12 +133,35 @@ function eliminar(){
 
 function espera(){
   $('#mostrarespera').click(function(event) {
-    alert("Ever");
+    $('#mostrarespera').css("visibility","hidden");
     $('.espera').css("visibility","visible");
+      $('#ocultarespera').css("visibility","visible");
 
   });
-  
 }
+
+function ocultarespera(){
+  $('#ocultarespera').click(function(event) {
+    $('.espera').fadeOut(speed,easing);
+    $('#mostrarespera').css("visibility","visible");
+    $('#ocultarespera').css("visibility","hidden");
+    $('.espera').css("visibility","hidden");
+
+  });
+}
+
+function obtenerid(){
+  $("div").click(function() {
+                var oID = $(this).attr("id");
+            //alert(oID);
+                });
+}
+
+elem.find('.deleteprojectclick').click(function() {
+			deleteProject(elem);
+		});
+
+
 
 
 function btnEditar_Click(event) {
@@ -136,4 +176,10 @@ Selección de elementos en base al nombre de clase
 
 $('div.myClass'); // si se especifica el tipo de elemento,
 // se mejora el rendimiento de la selección
+
+
+SELECCIONAR VARIOS
+$('[id^=pro]')
+
+
 */
