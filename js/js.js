@@ -1,8 +1,9 @@
 $(document).ready(function() {
-  data();
+  datoproyecto();
+  datopersona();
   menus();
   eliminar();
-espera();
+  espera();
   ocultarespera();
   obtenerid();
 });
@@ -76,7 +77,7 @@ function menus() {
 
 
 
-function data() {
+function datoproyecto() {
   /////////////////Datos de proyecto//////////////////////
   $('#btnagregarproyecto').click(function() {
     var nom = document.getElementById('nombreproyecto').value;
@@ -92,22 +93,8 @@ function data() {
     document.getElementById("nombreproyecto").value = null;
     
   });
-  ///////////////Datos de persona/////////////////
-  $('#btnagregarpersona').click(function() {
-    var nom = document.getElementById('nombrepersona').value;
-    if (nom == "") {
-      $('#nombrepersona').css('border-color: red');
-      
-    } else {
-      crearcuadro(nom);    
-      dialog.close();
-      /*Guardando los datos en el LocalStorage*/
-      localStorage.setItem('Nombre', nom);
-    }
-    document.getElementById("nombreproyecto").value = null;
-    
-  });
 }
+
 
 function crearcuadro(nombre) {
   $('.contenedorpro').append(' <div class="proyecto" id="pro-'+nombre+'" ><div class="nombre">'+
@@ -116,17 +103,38 @@ function crearcuadro(nombre) {
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
   '  <ul><li id="editar"><a href="">Editar</a></li><li id="eliminar"><a href="">Eliminar</a></li>'+
   '  </ul></li></ul></div></h5></div><div class="persona"  ondrop="soltar(event)" ondragover="permitirSoltar(event)"> </div></div>');
-  
-  
+}
+function datopersona() {
+  ///////////////Datos de persona/////////////////
+  $('#btnagregarpersona').click(function() {
+    var per = document.getElementById('nombrepersona').value;
+    if (per == "") {
+      $('#nombrepersona').css('border-color: red');
+      
+    } else {
+      crearpersona(per);    
+      dialog2.close();
+      /*Guardando los datos en el LocalStorage*/
+      localStorage.setItem('Nombre', nom);
+    }
+    document.getElementById("nombrepersona").value = null;
+    
+  });
+}
+
+function crearpersona(persona) {
+  $('.espera').append('<div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= '+persona+'>'+
+  '<div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>'+
+  '<div><h6 draggable="false" id="nombrecarita">'+persona+'</h6></div></div>');
 }
 
 
 function eliminar(){
-//  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
+  //  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
   $('#elimminar').click(function(event) {
     
-   $('#'+id).remove();
-
+    $('#'+id).remove();
+    
   });
   
 }
@@ -135,32 +143,31 @@ function espera(){
   $('#mostrarespera').click(function(event) {
     $('#mostrarespera').css("visibility","hidden");
     $('.espera').css("visibility","visible");
-      $('#ocultarespera').css("visibility","visible");
-
+    $('#ocultarespera').css("visibility","visible");
+    
   });
 }
 
 function ocultarespera(){
   $('#ocultarespera').click(function(event) {
-    $('.espera').fadeOut(speed,easing);
     $('#mostrarespera').css("visibility","visible");
     $('#ocultarespera').css("visibility","hidden");
     $('.espera').css("visibility","hidden");
-
+    
   });
 }
 
 function obtenerid(){
   $("div").click(function() {
-                var oID = $(this).attr("id");
-            //alert(oID);
-                });
+    var oID = $(this).attr("id");
+    //alert(oID);
+  });
 }
-
+/*
 elem.find('.deleteprojectclick').click(function() {
-			deleteProject(elem);
-		});
-
+deleteProject(elem);
+});
+*/
 
 
 
