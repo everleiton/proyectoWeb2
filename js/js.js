@@ -97,7 +97,7 @@ function datoproyecto() {
 
 
 function crearcuadro(nombre) {
-  $('.contenedorpro').append(' <div class="proyecto" id="pro-'+nombre+'" ><div class="nombre">'+
+  $('.contenedor').append(' <div class="proyecto" id="pro-'+nombre+'" ><div class="nombre">'+
   '  <div> <img src="./imagenes/proyecto.png" height="16px" width="16px" alt="imagen no encontrada" /></div>'+
   '  <div><h5>'+nombre+'</h5></div> <div class="menucuadro"><ul id="menu">'+
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
