@@ -81,7 +81,7 @@ li {
 .persona {
   display: flex;
   height: 100px auto;
-  width: 100px auto;
+  width: 100px ;
   padding: 10px;
   justify-content: center;
   
@@ -90,7 +90,7 @@ li {
 .proyecto {
   display: flex;
   height: 20% auto;
-  width: 20% auto;
+  width: 20% auto;;
   background-color: lightblue;
   margin: 20px;
   border-radius: 20px;

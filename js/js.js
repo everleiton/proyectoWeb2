@@ -82,7 +82,7 @@ function datoproyecto() {
   $('#btnagregarproyecto').click(function() {
     var nom = document.getElementById('nombreproyecto').value;
     if (nom === "") {
-      $('#nombreproyecto').css('border-color: red');
+      $('#nombreproyecto').css('border-color', 'red');
       alert("No debe dejar espacio en blanco");
     } else {
       crearcuadro(nom);    
@@ -109,7 +109,7 @@ function datopersona() {
   $('#btnagregarpersona').click(function() {
     var per = document.getElementById('nombrepersona').value;
     if (per == "") {
-      $('#nombrepersona').css('border-color: red');
+      $('#nombrepersona').css('border-color','red');
       
     } else {
       crearpersona(per);    
@@ -117,6 +117,7 @@ function datopersona() {
       /*Guardando los datos en el LocalStorage*/
       localStorage.setItem('Nombre', nom);
     }
+    
     document.getElementById("nombrepersona").value = null;
     
   });
@@ -131,9 +132,11 @@ function crearpersona(persona) {
 
 function eliminar(){
   //  var id=  document.getElementById("#proyecto").addEventListener('click', Ejecutar, false);
-  $('#elimminar').click(function(event) {
+  
     
-    $('#'+id).remove();
+  $('#eliminar').click(function(event) {
+        $('.eliminarproyecto').remove();
+    
     
   });
   

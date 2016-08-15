@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./framework/material.min.css">
   <link rel="stylesheet" href="./css/material.min.css">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.blue-light_blue.min.css" />
 </head>
 
 <body>
@@ -20,37 +19,26 @@
       <button class="mdl-button mdl-js-button mdl-button--fab" id="ocultarespera">  <img src="./imagenes/back.png" alt="" height="30px" width="30px" /></button>
     </div>
     <div class="espera"  ondrop="soltar(event)" ondragover="permitirSoltar(event)">
-          <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
-            <div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>
-            <div draggable="false" id="nombrecarita" class="caritanombre">Ever Leitón</div>
-          </div>
-          
-    </div>
-    
-    
-    <div class="contenedor">
-      
-      
-      
-      
-      
-    </div>
-    
-    
-    <div class="contenedormenus">
-      
-      <div class="botonopciones">
-        <button id="json" class="mdl-button mdl-js-button mdl-button--icon">
-          <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
-        </button>
-        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="json">
-          <li class="mdl-menu__item"><img src="./imagenes/mostrar.png" height="16px" width="16px" alt="imagen no encontrada" /> Mostrar cuadro de espera</li>
-          <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
-          <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
-        </ul>
+      <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
+        <div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>
+        <div draggable="false" id="nombrecarita" class="caritanombre">Ever Leitón</div>
       </div>
       
-      <div class="mdl-tooltip mdl-tooltip--large" for="demo-menu-lower-right">Opciones...</div>
+    </div>
+    
+    
+    <div class="contenedor"></div>
+
+    <div class="contenedormenus">
+          <div class="botonopciones">
+            <button id="json" class="mdl-button mdl-js-button mdl-button--icon">
+              <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="json">
+              <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
+              <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
+            </ul>
+      </div><div class="mdl-tooltip mdl-tooltip--large" for="json">Opciones aún no disponibles. Estamos en mantenimiento</div>
       
       <div id="context-menu">
         <ul>
@@ -83,7 +71,7 @@
         <div class="mdl-dialog__content">
           <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="nombrepersona" required>
-            <label class="mdl-textfield__label" for="nombrepersonaS">Nombre de la persona...</label>
+            <label class="mdl-textfield__label" for="nombrepersona">Nombre de la persona...</label>
           </div>
         </div>
         <div class="mdl-dialog__actions">
