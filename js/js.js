@@ -9,7 +9,8 @@ $(document).ready(function() {
 });
 var x = 0;
 var y = 0;
-
+var pro = 0;
+var per = 0;
 
 
 function menus() {
@@ -85,10 +86,15 @@ function datoproyecto() {
       $('#nombreproyecto').css('border-color', 'red');
       alert("No debe dejar espacio en blanco");
     } else {
-      crearcuadro(nom);    
+      crearcuadro(nom);
+      $("#pro-"+nom).css({
+        'left': x,
+        'top': y
+      });  
       dialog.close();
       /*Guardando los datos en el LocalStorage*/
-      localStorage.setItem('Nombre', nom);
+      pro+=1;
+      localStorage.setItem('Nombre proyecto'+pro, nom);
     }
     document.getElementById("nombreproyecto").value = null;
     
@@ -103,19 +109,21 @@ function crearcuadro(nombre) {
   '  <li id="opciones"><img src="./imagenes/menu.png" id="ico" height="30px" width="30px" alt="imagen no encontrada" />'+
   '  <ul><li id="editar"><a href="">Editar</a></li><li id="eliminar"><a href="">Eliminar</a></li>'+
   '  </ul></li></ul></div></h5></div><div class="persona"  ondrop="soltar(event)" ondragover="permitirSoltar(event)"> </div></div>');
+  
 }
 function datopersona() {
   ///////////////Datos de persona/////////////////
   $('#btnagregarpersona').click(function() {
-    var per = document.getElementById('nombrepersona').value;
-    if (per == "") {
+    var persona = document.getElementById('nombrepersona').value;
+    if (persona == "") {
       $('#nombrepersona').css('border-color','red');
-      
+      alert("No debe dejar espacio en blanco");
     } else {
-      crearpersona(per);    
+      crearpersona(persona);    
       dialog2.close();
       /*Guardando los datos en el LocalStorage*/
-      localStorage.setItem('Nombre', nom);
+      per+=1;
+      localStorage.setItem('Nombre persona'+per, persona);
     }
     
     document.getElementById("nombrepersona").value = null;

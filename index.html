@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-
+<!DOCTYPE html><html>
 <head>
   <meta charset="utf-8">
   <title>Project Manager</title>
@@ -18,6 +16,10 @@
       <button class="mdl-button mdl-js-button mdl-button--fab" id="mostrarespera">  <img src="./imagenes/mostrar.png" alt="" height="30px" width="30px" /></button>
       <button class="mdl-button mdl-js-button mdl-button--fab" id="ocultarespera">  <img src="./imagenes/back.png" alt="" height="30px" width="30px" /></button>
     </div>
+    <div class="mdl-tooltip mdl-tooltip--large" for="mostrarespera">Mostrar cuadro de espera</div>
+    
+    
+    
     <div class="espera"  ondrop="soltar(event)" ondragover="permitirSoltar(event)">
       <div class="cuadritopersona" draggable="true" ondragstart="arrastrar(event)" id= 'ever'>
         <div><img  draggable="false" src="./imagenes/face.png" alt="" height="50px" width="50px" /></div>
@@ -28,16 +30,16 @@
     
     
     <div class="contenedor"></div>
-
+    
     <div class="contenedormenus">
-          <div class="botonopciones">
-            <button id="json" class="mdl-button mdl-js-button mdl-button--icon">
-              <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
-            </button>
-            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="json">
-              <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
-              <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
-            </ul>
+      <div class="botonopciones">
+        <button id="json" class="mdl-button mdl-js-button mdl-button--icon">
+          <img src="./imagenes/menu.png" height="30px" width="30px" alt="imagen no encontrada" />
+        </button>
+        <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="json">
+          <li class="mdl-menu__item"><img src="./imagenes/import.png" height="16px" width="16px" alt="imagen no encontrada" /> Importar de Json</li>
+          <li class="mdl-menu__item"><img src="./imagenes/export.png" height="16px" width="16px" alt="imagen no encontrada" /> Exportar a Json</li>
+        </ul>
       </div><div class="mdl-tooltip mdl-tooltip--large" for="json">Opciones aún no disponibles. Estamos en mantenimiento</div>
       
       <div id="context-menu">
@@ -46,6 +48,9 @@
           <li class="addper" id="crear_persona"> <img src="./imagenes/addpersona.png" height="26px" width="26px" alt="imagen no encontrada" />Crear persona</li>
         </ul>
       </div>
+      <div class="mdl-tooltip mdl-tooltip--large" for="crear_proyecto">Opción que permite agregar un nuevo proyecto al área de trabajo</div>
+      <div class="mdl-tooltip mdl-tooltip--large" for="crear_persona">Opción que permite agregar una persona al área de espera para luego poder asignarla a un proyecto</div>
+      
     </div>
     
     <div class="agregarproyecto">
@@ -67,7 +72,7 @@
     
     <div class="agregarpersona">
       <dialog id="dialog2" class="mdl-dialog">
-        <h3 class="mdl-dialog__title">Agregar una persona <img src="./imagenes/persona.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
+        <h3 class="mdl-dialog__title">Agregar persona <img src="./imagenes/persona.png" height="36px" width="36px"alt="imagen no encontrada" /></h3>
         <div class="mdl-dialog__content">
           <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" id="nombrepersona" required>
@@ -95,6 +100,7 @@
     ev.dataTransfer.setData("Text", ev.target.id);
   }
   </script>
+  
   <script type="text/javascript" src="./js/jquery-3.1.0.min.js">
   </script>
   <script type="text/javascript" src="./js/js.js">
