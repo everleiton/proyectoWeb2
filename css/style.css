@@ -73,6 +73,7 @@ li {
   box-shadow: 0 0 30px #159dc1;
   justify-content: space-between;
   flex-flow: row;
+
 }
 .botonopcionescuadro {
   padding-top: 5px;
@@ -96,6 +97,7 @@ li {
   border-radius: 20px;
   flex-flow: column;
   justify-content: space-around;
+    flex-wrap: wrap;
 }
 .cuadritopersona{
   background-color: #11a396;
@@ -107,7 +109,7 @@ li {
   border-radius: 15px;
   box-shadow: 14px rgb(122, 249, 108);
   margin: 10px;
-
+  flex-wrap: wrap;
 }
 .caritanombre{
 
